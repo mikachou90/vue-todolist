@@ -1,35 +1,33 @@
 # vue-todo-list
 
-This template should help get you started developing with Vue 3 in Vite.
+使用 vue.js 3 搭配 vue-router 和 vite 寫成 todo-list 專案
 
-## Recommended IDE Setup
+## 專案介紹
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+![signup picture](/public/signup%20page.png)
 
-## Customize configuration
+【註冊功能 】
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+任何使用者皆可建立一個帳號，密碼長度須至少6個字數。註冊成功會跳出 alart 通知，並導回登入頁面，需再次輸入帳號及密碼即可登入。
 
-## Project Setup
+若重複註冊同一個 email 則會跳出 alart 通知，並導回登入頁面。
 
-```sh
-npm install
-```
+---
 
-### Compile and Hot-Reload for Development
+![login picture](/public/login%20page.png)
 
-```sh
-npm run dev
-```
+【登入功能】
 
-### Compile and Minify for Production
+輸入已註冊帳號即可登入。登入成功會跳出 alart 通知後導向主頁面。
 
-```sh
-npm run build
-```
+---
 
-### Lint with [ESLint](https://eslint.org/)
+![todo picture](/public/todo%20page.png)
 
-```sh
-npm run lint
-```
+【新增/確認/刪除 待辦事項】
+
+1. 上方 input 欄可輸入待辦事項，按黑色+按鈕即可新增待辦事項。
+2. 下方欄位會顯示待辦事項，欄位上方有三個按鈕「全部」、「待完成」、「已完成」按鈕可以切換瀏覽不同狀態的待辦事項。
+3. 每個待辦事項前方有正方形按鈕，可以切換事項是否完成的狀態。正方形為待完成、橘色 check icon 為已完成。已完成的事項會以淺灰色和刪除號呈現，已完成的事項再次點選可以切換成未完成狀態。
+4. 每個待辦事項後方的 x 按鈕為刪除待辦事項。
+5. 最下方會顯示尚有多少個待辦事項。
