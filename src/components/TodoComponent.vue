@@ -7,28 +7,27 @@ const emit = defineEmits('deleteTodo', 'updateTodoStatus')
 
 <template>
   <div id="todo.id" class="todoWrapper">
-    <svg
+    <button
       v-show="todo.status === true"
-      x="0px"
-      y="0px"
-      viewBox="0 0 507.506 507.506"
-      width="20"
-      height="20"
-      style="margin-right: 1rem"
+      class="donecheck"
+      @click="emit('updateTodoStatus', todo.id)"
     >
-      <g>
-        <path
-          d="M163.865,436.934c-14.406,0.006-28.222-5.72-38.4-15.915L9.369,304.966c-12.492-12.496-12.492-32.752,0-45.248l0,0   c12.496-12.492,32.752-12.492,45.248,0l109.248,109.248L452.889,79.942c12.496-12.492,32.752-12.492,45.248,0l0,0   c12.492,12.496,12.492,32.752,0,45.248L202.265,421.019C192.087,431.214,178.271,436.94,163.865,436.934z"
-          fill="#FFD370"
-        />
-      </g>
-    </svg>
+      <svg x="0px" y="0px" viewBox="0 0 507.506 507.506" width="20" height="20">
+        <g>
+          <path
+            d="M163.865,436.934c-14.406,0.006-28.222-5.72-38.4-15.915L9.369,304.966c-12.492-12.496-12.492-32.752,0-45.248l0,0   c12.496-12.492,32.752-12.492,45.248,0l109.248,109.248L452.889,79.942c12.496-12.492,32.752-12.492,45.248,0l0,0   c12.492,12.496,12.492,32.752,0,45.248L202.265,421.019C192.087,431.214,178.271,436.94,163.865,436.934z"
+            fill="#FFD370"
+          />
+        </g>
+      </svg>
+    </button>
+
     <button
       v-show="todo.status === false"
       class="checkbox"
       @click="emit('updateTodoStatus', todo.id)"
     ></button>
-    <p :class="{ check: todo.status }">{{ todo.content }}</p>
+    <p :class="{ checktext: todo.status }">{{ todo.content }}</p>
     <button class="deleteBtn" @click="emit('deleteTodo', todo.id)">X</button>
   </div>
 </template>
@@ -69,8 +68,13 @@ const emit = defineEmits('deleteTodo', 'updateTodoStatus')
   font-size: 1.2rem;
 }
 
-.check {
+.checktext {
   text-decoration: line-through;
   color: lightgray;
+}
+
+.donecheck {
+  padding: 0;
+  margin-right: 1rem;
 }
 </style>

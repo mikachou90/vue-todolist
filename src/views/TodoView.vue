@@ -282,6 +282,7 @@ nav button:hover {
   position: relative;
   width: 80%;
   margin: 2rem 0;
+  font-size: 14px;
 }
 
 .textInput input {
@@ -383,7 +384,7 @@ nav button:hover {
   }
 
   .textInput input {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .textInput button {
@@ -395,7 +396,7 @@ nav button:hover {
   }
 
   .buttonGrp button {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   #noTodoUI h2 {
