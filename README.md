@@ -2,6 +2,8 @@
 
 使用 vue.js 3 搭配 vue-router 和 vite 寫成 todo-list 專案
 
+Live Demo <https://mikachou90.github.io/vue-todolist/>
+
 ## 專案介紹
 
 ![signup picture](/public/signup%20page.png)
