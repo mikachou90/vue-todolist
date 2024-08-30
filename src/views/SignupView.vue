@@ -72,7 +72,7 @@ async function signup() {
           <input
             name="password"
             id="password"
-            type="text"
+            type="password"
             placeholder="請輸入至少6個字的密碼"
             minlength="6"
             v-model="password"

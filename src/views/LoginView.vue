@@ -74,7 +74,8 @@ async function login() {
           <input
             name="password"
             id="password"
-            type="text"
+            type="password"
+            minlength="6"
             placeholder="請輸入密碼"
             v-model="password"
             required
