@@ -100,7 +100,7 @@ async function getTodos() {
 async function addTodo() {
   const url = `${baseURL}/todos/`
 
-  if (newTodo.value === '') {
+  if (!newTodo.value.trim()) {
     alert('請輸入待辦事項')
     return
   } else {
